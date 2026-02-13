@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevMatch: The Romantic Casting 🎬</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <div class="film-grain"></div>
+
+    <div class="cinema-container">
+        <div class="ticket-header">
+            <span class="production-house">FOMOGRAPHY STUDIO PRESENTS</span>
+            <h1>The Perfect Match</h1>
+            <div class="divider-gold"></div>
+        </div>
+
+        <div id="casting-section">
+            <p class="scene-title">SCENE 1: THE ROMANTIC CASTING</p>
+            
+            <div class="input-row">
+                <div class="role-group">
+                    <label>Lead Actor (You)</label>
+                    <input type="text" id="devName" placeholder="Enter your name..." autocomplete="off">
+                </div>
+                
+                <div class="role-group">
+                    <label>The Love Interest (Tech)</label>
+                    <div class="select-wrapper">
+                        <select id="techStack">
+                            <option value="" disabled selected>Choose your crush... 💘</option>
+                            <option value="Java">Java</option>
+                            <option value="Python">Python</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="React">React</option>
+                            <option value="Angular">Angular</option>
+                            <option value="Vue.js">Vue.js</option>
+                            <option value="C# / .NET">C# / .NET</option>
+                            <option value="PHP">PHP</option>
+                            <option value="Docker">Docker</option>
+                            <option value="Kubernetes">Kubernetes</option>
+                            <option value="Rust">Rust</option>
+                            <option value="GoLang">GoLang</option>
+                            <option value="Swift">Swift</option>
+                            <option value="Cobol">Cobol (Boomer)</option>
+                            <option value="Excel">Excel (Guilty Pleasure)</option>
+                            <option value="Assembly">Assembly (Hardcore)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button id="actionBtn" onclick="runMatch()">
+                <span>💘 FIND LOVE</span>
+            </button>
+        </div>
+
+        <div id="result-section" class="hidden">
+            
+            <div class="poster-display">
+                <img id="avatar-user" src="" alt="User">
+                <div class="heart-pulse">❤️</div>
+                <img id="avatar-tech" src="" alt="Tech">
+            </div>
+
+            <div class="rating-box">
+                <span class="critic-label">COMPATIBILITY SCORE</span>
+                <span id="score-display">0%</span>
+            </div>
+            
+            <div class="review-text">
+                <h3 id="match-title">Analyzing Chemistry...</h3>
+                <p id="match-desc" class="script-font"></p>
+            </div>
+            
+            <button class="cut-btn" onclick="resetTest()">TRY ANOTHER CRUSH 💔</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
